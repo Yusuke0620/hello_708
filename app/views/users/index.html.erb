@@ -1,0 +1,10 @@
+<p>Hello View</p>
+<%= @sum %>
+
+<ul>
+<% @users.each do |user| %>
+  <li>
+    <%= user.id %>, <%= user.name %>, <%= user.age %>歳
+  </li>
+<% end %>
+</ul>
