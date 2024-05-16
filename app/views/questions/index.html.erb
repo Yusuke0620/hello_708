@@ -13,8 +13,10 @@
       <td><%= question.title %></td>
       <td><%= question.name %></td>
       <td><%= question.content %></td>
-      <td><%= link_to("/questions/show", question_path(question) ) %></td>
+      <td><%= link_to("show", question_path(question) ) %></td>
+      <td><%= link_to("編集", edit_question_path(question) ) %></td>
+      <td><%= link_to("削除", question_path(question),
+          data: {turbo_method: 'delete', turbo_confirm: '本当に削除してよろしいですか?'}) %></td>
     </tr>
-  
   <% end %>
 </table>
